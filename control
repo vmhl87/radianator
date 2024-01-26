@@ -1,0 +1,9 @@
+Package: com.iframe.radianator
+Name: radianator
+Version: 0.1.3
+Architecture: iphoneos-arm
+Description: Radians kelvin in weather app
+Maintainer: iframe
+Author: iframe
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000)
