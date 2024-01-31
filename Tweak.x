@@ -20,6 +20,7 @@ NSMutableString *degToRad(NSString *text) {
 }
 
 bool isKelvin(NSString *text) {
+	if([text length] < 1) return false;
 	for(int i=0; i<[text length]-1; i++) {
 		unichar c = [text characterAtIndex:i];
 		if(c < '0' || c > '9') return false;
@@ -51,7 +52,6 @@ bool isKelvin(NSString *text) {
 
 %end
 
-/*
 %hook WFTemperatureUnitObserver
 
 - (int)temperatureUnit {
@@ -59,4 +59,3 @@ bool isKelvin(NSString *text) {
 }
 
 %end
-*/
