@@ -1,10 +1,12 @@
 #import <UIKit/UIKit.h>
 
 NSMutableString *degToRad(NSString *text) {
+	NSMutableString *ret = [[NSMutableString alloc] init];
+	[ret appendString:text];
 	int radians = 0;
-	for(int i=0; i<[text length]; i++) {
+	for(int i=0; i<[text length]-1; i++) {
 		unichar c = [text characterAtIndex:i];
-		if(c >= '0' && c <= '9') radians = radians*10 + c-'0';
+		radians = radians*10 + c-'0';
 	}
 	radians = (radians*5)/9;
 	int tens = radians/100,
@@ -49,6 +51,7 @@ bool isKelvin(NSString *text) {
 
 %end
 
+/*
 %hook WFTemperatureUnitObserver
 
 - (int)temperatureUnit {
@@ -56,3 +59,4 @@ bool isKelvin(NSString *text) {
 }
 
 %end
+*/
